@@ -1,0 +1,86 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology> a owl:Ontology .
+
+<http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#ArchetypalCategory> a owl:Class ;
+    rdfs:subClassOf <http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Category> .
+
+<http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#AutomaticAnnotator> a owl:Class ;
+    rdfs:subClassOf <http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Annotator> .
+
+<http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Context> a owl:Class ;
+    rdfs:subClassOf <http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Modality> .
+
+<http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#DouglasCowieCategory> a owl:Class ;
+    rdfs:subClassOf <http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Category> .
+
+<http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Face> a owl:Class ;
+    rdfs:subClassOf <http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Modality> .
+
+<http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Gesture> a owl:Class ;
+    rdfs:subClassOf <http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Modality> .
+
+<http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#HumanAnnotator> a owl:Class ;
+    rdfs:subClassOf <http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Annotator> .
+
+<http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Posture> a owl:Class ;
+    rdfs:subClassOf <http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Modality> .
+
+<http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#RobertPlutchikCategory> a owl:Class ;
+    rdfs:subClassOf <http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Category> .
+
+<http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Text> a owl:Class ;
+    rdfs:subClassOf <http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Modality> .
+
+<http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Voice> a owl:Class ;
+    rdfs:subClassOf <http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Modality> .
+
+<http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#emotionValue> a owl:DatatypeProperty ;
+    rdfs:domain <http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Category> ;
+    rdfs:range xsd:string .
+
+<http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#hasCategory> a owl:ObjectProperty ;
+    rdfs:domain <http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Emotion> ;
+    rdfs:range <http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Category> .
+
+<http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#hasIntensity> a owl:DatatypeProperty ;
+    rdfs:domain <http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Category> ;
+    rdfs:range xsd:float .
+
+<http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#hasModality> a owl:ObjectProperty ;
+    rdfs:domain <http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Emotion> ;
+    rdfs:range <http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Modality> .
+
+<http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#isAnnotatedBy> a owl:ObjectProperty ;
+    rdfs:domain <http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Emotion> ;
+    rdfs:range <http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Annotator> .
+
+<http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#isCausedBy> a owl:ObjectProperty ;
+    rdfs:domain <http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Event> ;
+    rdfs:range <http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Object> .
+
+<http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#isProducedBy> a owl:ObjectProperty ;
+    rdfs:domain <http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Event> ;
+    rdfs:range <http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Person> ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+<http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#produces> a owl:ObjectProperty ;
+    rdfs:domain <http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Event> ;
+    rdfs:range <http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Emotion> .
+
+<http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Object> a owl:Class .
+
+<http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Person> a owl:Class .
+
+<http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Annotator> a owl:Class .
+
+<http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Event> a owl:Class .
+
+<http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Emotion> a owl:Class .
+
+<http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Category> a owl:Class .
+
+<http://www.semanticweb.org/idongo/ontologies/2020/11/Emotional_Human_Ontology#Modality> a owl:Class .
+
